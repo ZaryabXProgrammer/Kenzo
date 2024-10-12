@@ -1,8 +1,36 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 const Navbar = () => {
+  const navigate = useNavigate();
 
+  const handleScrollToGallery = (event) => {
+    event.preventDefault();
+    navigate('/'); // First, navigate to the homepage ("/").
+
+    // After navigating, wait until the page is loaded, then scroll to #quadgallery.
+    setTimeout(() => {
+      const element = document.getElementById('quadgallery');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100); // Timeout to allow the homepage to load before scrolling
+  };
+
+  const handleScrollToCollections = (event) => {
+    event.preventDefault();
+    navigate('/products'); // First, navigate to the products page.
+
+    // After navigating, wait until the page is loaded, then scroll.
+    setTimeout(() => {
+      const element = document.getElementById('collections');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100); // Timeout to allow the products page to load before scrolling
+  };
 
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -43,7 +71,7 @@ const Navbar = () => {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link to='/' className="flex items-center space-x-3 rtl:space-x-reverse">
           {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" /> */}
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Logo</span>
+          <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">Logo</span>
         </Link>
 
         {/* Right side buttons */}
@@ -79,8 +107,13 @@ const Navbar = () => {
 
 
       <aside className='flex flex-row justify-center pb-[1%]'>
-        <div className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${isOpen ? 'block' : 'hidden'}`} id="navbar-sticky">
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+        <div
+          className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${isOpen ? 'block' : 'hidden'
+            }`}
+          id="navbar-sticky"
+          style={{ backgroundColor: isOpen ? 'black' : 'transparent' }}  // Added black background for mobile menu
+        >
+          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
             <li>
               <Link to='/' className="block py-1 px-2 transition-colors hover:bg-white hover:text-black text-white text-xl  " aria-current="page">Home</Link>
             </li>
@@ -88,10 +121,22 @@ const Navbar = () => {
               <Link to='/products' className="block py-1 px-2 transition-colors hover:bg-white hover:text-black text-white text-xl  " aria-current="page">Products</Link>
             </li>
             <li>
-              <a to='/' className="block py-1 px-2 transition-colors hover:bg-white hover:text-black text-white text-xl  " aria-current="page">About Us</a>
+              <a
+                href="/#collections"
+                onClick={handleScrollToCollections}
+                className="block py-1 px-2 transition-colors hover:bg-white hover:text-black text-white text-xl"
+              >
+                Collections
+              </a>
             </li>
             <li>
-              <a href="#" className="block py-1 px-2 transition-colors hover:bg-white hover:text-black text-white text-xl  " aria-current="page">Contact</a>
+              <a
+                href="/#quadgallery"
+                onClick={handleScrollToGallery}
+                className="block py-1 px-2 transition-colors hover:bg-white hover:text-black text-white text-xl"
+              >
+                Gallery
+              </a>
             </li>
 
           </ul>

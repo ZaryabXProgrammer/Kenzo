@@ -31,7 +31,7 @@ const ScrambledImages = () => {
 
          
             <div className=" mx-auto py-12 lg:py-10 space-y-24 h-svh flex flex-col justify-center">
-                <h1 className=" text-center font-semibold text-red-600 text-5xl">Get Amazing NFT Collection</h1>
+                <h1 className=" text-center font-semibold text-red-600 md:text-5xl pt-[4%] text-3xl">Get Amazing NFT Collection</h1>
 
                 <div className="flex flex-col sm:flex-row mx-auto">
                     {/* Starts component */}

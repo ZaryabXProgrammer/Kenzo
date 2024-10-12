@@ -68,7 +68,7 @@ const AllProductSlider = () => {
     }, [instanceRef]);
 
     return (
-        <section className="pt-[4%] md:px-[6%] px-[1%]">
+        <section className="pt-[4%] md:px-[6%] px-[1%]" id='collections'>
 
 
             <article className="flex flex-row items-center justify-between px-[4%]">

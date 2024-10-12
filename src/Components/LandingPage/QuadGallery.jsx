@@ -19,7 +19,7 @@ const imagesData = [
 
 const QuadGallery = () => {
     return (
-        <div className="grid grid-cols-2 gap-2 px-[9%] pt-[5%]">
+        <div className="grid grid-cols-2 gap-2 px-[9%] pt-[5%]" id="quadgallery">
             {imagesData.map((item, index) => (
                 <div className="relative group overflow-hidden" key={index}>
                     <div className="aspect-square w-full">
