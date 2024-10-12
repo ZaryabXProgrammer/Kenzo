@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'FuturaPTMedium';
+  src: url('./Utils/Fonts/FuturaPTMedium.otf') format('opentype');
+
+}
+@font-face {
+  font-family: 'FuturaPTBook';
+  src: url('./Utils/Fonts/FuturaPTBook.otf') format('opentype');
+
+}
+
+body {
+  font-family: 'FuturaPTMedium', sans-serif;
+  font-weight: normal;
+}
