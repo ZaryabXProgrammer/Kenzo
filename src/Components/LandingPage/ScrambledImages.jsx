@@ -26,7 +26,7 @@ const ScrambledImages = () => {
     ];
 
     return (
-        <section className="bg-zinc-50 overflow-hidden px-[9%]">
+        <section className="bg-zinc-50 overflow-hidden h-auto md:px-[9%] px-[16%] md:pt-[1%] pt-[21%] md:pb-[1%] mb-[5%] md:mb-0">
 
 
          

@@ -19,15 +19,13 @@ const TopProductInf = () => {
 
         mainContainerRef.current.addEventListener('scroll', handleScroll);
 
-        return () => {
-            mainContainerRef.current.removeEventListener('scroll', handleScroll);
-        };
+       
     }, []);
 
     return (
-        <div ref={mainContainerRef} className="flex h-screen overflow-y-auto">
+        <div ref={mainContainerRef} className="flex flex-col lg:flex-row h-screen lg:h-auto overflow-y-auto">
             {/* Left side - Fixed height container with scrollable images */}
-            <div className="w-1/2 p-4 overflow-hidden h-screen">
+            <div className="w-full lg:w-1/2 p-4 lg:h-screen overflow-hidden">
                 <div
                     ref={imageContainerRef}
                     className="h-full overflow-y-scroll scroll-smooth custom-scrollbar-hide"
@@ -45,14 +43,14 @@ const TopProductInf = () => {
             </div>
 
             {/* Right side - Fixed Product Details */}
-            <div className="w-1/2 p-8 bg-white">
-                <h2 className="text-5xl mb-4">NFT TAILWIND</h2>
-                <p className="text-gray-500 mb-6 text-[17px]">
+            <div className="w-full lg:w-1/2 p-4 lg:p-8 bg-white">
+                <h2 className="text-3xl lg:text-5xl mb-4">NFT TAILWIND</h2>
+                <p className="text-gray-500 mb-6 text-base lg:text-[17px]">
                     Product description goes here. This is a placeholder for the actual product details.
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi at est id natus necessitatibus ea ut incidunt. Doloremque distinctio sequi neque libero eveniet! Laborum, exercitationem eligendi dolore consectetur non ullam doloribus vel, delectus pariatur deserunt recusandae a, perspiciatis iste provident.
                 </p>
                 <div className="mb-6">
-                    <h3 className="text-xl font-semibold mb-2">Key Features:</h3>
+                    <h3 className="text-lg lg:text-xl font-semibold mb-2">Key Features:</h3>
                     <ul className="list-disc list-inside text-gray-600">
                         <li>Feature 1</li>
                         <li>Feature 2</li>
@@ -60,13 +58,14 @@ const TopProductInf = () => {
                     </ul>
                 </div>
                 <div className="mb-6">
-                    <p className="text-sm text-gray-500">30 ML</p>
+                    <p className="text-sm lg:text-base text-gray-500">30 ML</p>
                 </div>
-                <button className="w-50px text-black border border-black bg-white py-3 px-6  hover:bg-black hover:text-white transition duration-300">
+                <button className="w-full lg:w-auto text-black border border-black bg-white py-3 px-6 hover:bg-black hover:text-white transition duration-300">
                     Add to Cart
                 </button>
             </div>
         </div>
+
     );
 };
 

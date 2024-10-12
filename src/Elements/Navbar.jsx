@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -40,10 +41,10 @@ const Navbar = () => {
     >
 
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a className="flex items-center space-x-3 rtl:space-x-reverse">
+        <Link to='/' className="flex items-center space-x-3 rtl:space-x-reverse">
           {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" /> */}
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Logo</span>
-        </a>
+        </Link>
 
         {/* Right side buttons */}
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -54,7 +55,7 @@ const Navbar = () => {
             onClick={toggleNavbar}
             data-collapse-toggle="navbar-sticky"
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-[#ebebeb] border border-[#ebebeb] rounded-lg md:hidden hover:bg-transparent focus:outline-none focus:ring-2 "
             aria-controls="navbar-sticky"
             aria-expanded={isOpen}
           >
@@ -63,12 +64,13 @@ const Navbar = () => {
               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
             </svg>
           </button>
+
         </div>
 
         {/* Navbar items - toggle visibility on small screens */}
 
 
-        <h1 className='text-5xl font-bold text-white'>KENZO</h1>
+        <h1 className='text-5xl font-bold text-white md:flex hidden'>KENZO</h1>
 
 
 
@@ -80,13 +82,13 @@ const Navbar = () => {
         <div className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${isOpen ? 'block' : 'hidden'}`} id="navbar-sticky">
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
             <li>
-              <a href="#" className="block py-1 px-2 transition-colors hover:bg-white hover:text-black text-white text-xl  " aria-current="page">Home</a>
+              <Link to='/' className="block py-1 px-2 transition-colors hover:bg-white hover:text-black text-white text-xl  " aria-current="page">Home</Link>
             </li>
             <li>
-              <a href="#" className="block py-1 px-2 transition-colors hover:bg-white hover:text-black text-white text-xl  " aria-current="page">Products</a>
+              <Link to='/products' className="block py-1 px-2 transition-colors hover:bg-white hover:text-black text-white text-xl  " aria-current="page">Products</Link>
             </li>
             <li>
-              <a href="#" className="block py-1 px-2 transition-colors hover:bg-white hover:text-black text-white text-xl  " aria-current="page">About Us</a>
+              <a to='/' className="block py-1 px-2 transition-colors hover:bg-white hover:text-black text-white text-xl  " aria-current="page">About Us</a>
             </li>
             <li>
               <a href="#" className="block py-1 px-2 transition-colors hover:bg-white hover:text-black text-white text-xl  " aria-current="page">Contact</a>

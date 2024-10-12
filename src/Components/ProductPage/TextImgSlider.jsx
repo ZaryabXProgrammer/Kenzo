@@ -46,30 +46,40 @@ const TextImgSlider = () => {
     ];
 
     return (
-        <div className="relative  mx-auto max-w-screen-xl py-8 px-[9%]">
+        <div className="relative mx-auto max-w-screen-xl py-8 px-4 sm:px-[5%] lg:px-[9%]">
             <div ref={sliderRef} className="keen-slider">
                 {products.map((product, idx) => (
                     <div key={idx} className="keen-slider__slide">
-                        <div className="flex items-center bg-white p-6 rounded-lg shadow-md">
-                            <div className="flex-1 pr-6">
-                                <h2 className="text-3xl  mb-4">{product.title}</h2>
-                                <p className="text-gray-600 text-lg">{product.description}</p>
+                        <div className="flex flex-col md:flex-row items-center bg-white p-4 sm:p-6 rounded-lg shadow-md">
+                            {/* Text content */}
+                            <div className="flex-1 md:pr-6 text-center md:text-left">
+                                <h2 className="text-2xl sm:text-3xl mb-2 sm:mb-4">{product.title}</h2>
+                                <p className="text-gray-600 text-sm sm:text-lg">{product.description}</p>
                             </div>
-                            <div className="flex-shrink-0">
-                                <img src={product.image} alt={product.title} className="w-[14rem] h-[14rem] rounded-full" />
+                            {/* Image */}
+                            <div className="flex-shrink-0 mt-4 md:mt-0">
+                                <img
+                                    src={product.image}
+                                    alt={product.title}
+                                    className="w-[8rem] h-[8rem] sm:w-[12rem] sm:h-[12rem] md:w-[14rem] md:h-[14rem] rounded-full object-cover"
+                                />
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
+
             {loaded && instanceRef.current && (
                 <>
+                    {/* Left Arrow */}
                     <button
                         onClick={(e) => e.stopPropagation() || instanceRef.current?.prev()}
                         className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
                     >
                         <ChevronLeft className="w-6 h-6" />
                     </button>
+
+                    {/* Right Arrow */}
                     <button
                         onClick={(e) => e.stopPropagation() || instanceRef.current?.next()}
                         className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
@@ -78,19 +88,21 @@ const TextImgSlider = () => {
                     </button>
                 </>
             )}
+
             {loaded && instanceRef.current && (
                 <div className="flex justify-center mt-4">
                     {[...Array(instanceRef.current.track.details.slides.length).keys()].map((idx) => (
                         <button
                             key={idx}
                             onClick={() => instanceRef.current?.moveToIdx(idx)}
-                            className={`h-2 w-8 rounded-full mx-1 ${currentSlide === idx ? 'bg-black' : 'bg-gray-300'
+                            className={`h-2 w-6 sm:w-8 rounded-full mx-1 ${currentSlide === idx ? 'bg-black' : 'bg-gray-300'
                                 }`}
                         ></button>
                     ))}
                 </div>
             )}
         </div>
+
     );
 };
 
