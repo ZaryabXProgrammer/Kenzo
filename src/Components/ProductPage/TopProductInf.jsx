@@ -23,7 +23,7 @@ const TopProductInf = () => {
     }, []);
 
     return (
-        <div ref={mainContainerRef} className="flex flex-col lg:flex-row h-screen lg:h-auto overflow-y-auto">
+        <div ref={mainContainerRef} className="flex flex-col lg:flex-row pt-[15%] h-screen lg:h-auto overflow-y-auto bg-gray-900 text-white">
             {/* Left side - Fixed height container with scrollable images */}
             <div className="w-full lg:w-1/2 p-4 lg:h-screen overflow-hidden">
                 <div
@@ -43,24 +43,24 @@ const TopProductInf = () => {
             </div>
 
             {/* Right side - Fixed Product Details */}
-            <div className="w-full lg:w-1/2 p-4 lg:p-8 bg-white">
+            <div className="w-full lg:w-1/2 p-4 lg:p-8 text-white">
                 <h2 className="text-3xl lg:text-5xl mb-4">NFT TAILWIND</h2>
-                <p className="text-gray-500 mb-6 text-base lg:text-[17px]">
+                <p className="text-gray-300 mb-6 text-base lg:text-[17px]">
                     Product description goes here. This is a placeholder for the actual product details.
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi at est id natus necessitatibus ea ut incidunt. Doloremque distinctio sequi neque libero eveniet! Laborum, exercitationem eligendi dolore consectetur non ullam doloribus vel, delectus pariatur deserunt recusandae a, perspiciatis iste provident.
                 </p>
                 <div className="mb-6">
                     <h3 className="text-lg lg:text-xl font-semibold mb-2">Key Features:</h3>
-                    <ul className="list-disc list-inside text-gray-600">
+                    <ul className="list-disc list-inside text-gray-400">
                         <li>Feature 1</li>
                         <li>Feature 2</li>
                         <li>Feature 3</li>
                     </ul>
                 </div>
                 <div className="mb-6">
-                    <p className="text-sm lg:text-base text-gray-500">30 ML</p>
+                    <p className="text-sm lg:text-base text-gray-400">30 ML</p>
                 </div>
-                <button className="w-full lg:w-auto text-black border border-black bg-white py-3 px-6 hover:bg-black hover:text-white transition duration-300">
+                <button className="w-full lg:w-auto text-white border border-white bg-gray-800 py-3 px-6 hover:bg-white hover:text-black transition duration-300">
                     Add to Cart
                 </button>
             </div>

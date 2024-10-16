@@ -26,12 +26,13 @@ const ScrambledImages = () => {
     ];
 
     return (
-        <section className="bg-zinc-50 overflow-hidden h-auto md:px-[9%] px-[16%] md:pt-[1%] pt-[21%] md:pb-[1%] mb-[5%] md:mb-0">
+        <section className="overflow-hidden h-auto md:px-[9%] px-[16%] md:pt-[1%] pt-[21%] md:pb-[1%] pb-[7%]  bg-gray-900 text-white" id="ourCollections">
 
-
-         
-            <div className=" mx-auto py-12 lg:py-10 space-y-24 h-svh flex flex-col justify-center">
-                <h1 className=" text-center font-semibold text-red-600 md:text-5xl pt-[4%] text-3xl">Get Amazing NFT Collection</h1>
+            <div className="mx-auto py-12 lg:py-10 space-y-24 h-auto md:h-[77vh] flex flex-col">
+                <h1 className="flex flex-col text-center font-semibold text-red-500 md:text-5xl pt-[4%] text-3xl">
+                    <span>Our Collection</span>
+                    <span>我们的收藏</span>
+                </h1>
 
                 <div className="flex flex-col sm:flex-row mx-auto">
                     {/* Starts component */}
@@ -46,10 +47,9 @@ const ScrambledImages = () => {
                     ))}
                     {/* Ends component */}
                 </div>
-             
-              
             </div>
         </section>
+
     );
 };
 

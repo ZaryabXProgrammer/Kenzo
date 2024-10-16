@@ -20,7 +20,7 @@ const Products = () => {
         <React.Fragment>
 
 
-            <article className="overflow-x-hidden md:pt-[9%] pt-[20%] md:px-[10%] px-[1%]">
+            <article className="overflow-x-hidden">
 
                 <TopProductInf />
 

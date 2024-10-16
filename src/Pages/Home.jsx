@@ -2,8 +2,7 @@
 import { useLocation } from 'react-router-dom'
 import CardSlider from '../Components/LandingPage/CardSlider'
 import Hero from '../Components/LandingPage/Hero'
-import ImgCarousel from '../Components/LandingPage/ImgCarousel'
-import QuadGallery from '../Components/LandingPage/QuadGallery'
+
 import ScrambledImages from '../Components/LandingPage/ScrambledImages'
 import { useEffect } from 'react'
 
@@ -29,11 +28,11 @@ const Home = () => {
 
       <CardSlider />
 
-      <QuadGallery />
+      {/* <QuadGallery /> */}
 
       <ScrambledImages />
 
-      <ImgCarousel />
+      {/* <ImgCarousel /> */}
 
     </div>
   )

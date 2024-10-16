@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom"
 
 
 const Footer = () => {
   return (
-    <footer className="bg-[#111111]">
-      <div className="container mx-auto p-0 md:p-8 xl:px-0">
-        <div className="mx-auto max-w-7xl px-6 pb-10 pt-16">
-          <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+    <footer className="bg-gray-900 ">
+      <aside className="container mx-auto p-0 md:p-8 xl:px-0">
+        <main className="mx-auto max-w-7xl px-6 pb-10 pt-16">
+          <article className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-4">
               <div>
                 <a href="/">
@@ -19,12 +20,14 @@ const Footer = () => {
                         className="w-16"
                       /> */}
                     </span>
-                    <article className="text-themeBlue text-3xl font-bold"><span className="text-white">KENZO</span></article>
+                    <article className="text-themeBlue text-xl font-bold"><span className="text-white">中國朝代藝術
+                      Chinese Dynasty Art</span></article>
                   </div>
                 </a>
               </div>
-              <div className="max-w-md pr-16 text-md text-gray-200">
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, accusantium.
+              <div className="max-w-md pr-16 text-[15px] pt-[3%] text-gray-200 flex flex-col gap-4">
+                <p>我們正在徹底改變藝術品擁有權的方式</p>
+                We are revolutionizing historical art ownership, minting relic NFTs to the Blockchain. These masterpieces are fractionalized and available across decentralized platforms to anyone with an Ethereum wallet.
               </div>
               <div className="flex space-x-2">
                 <a href="" target="_blank" className="text-gray-200 hover:text-gray-200">
@@ -50,26 +53,13 @@ const Footer = () => {
                 <div>
                   <h3 className="text-md font-semibold leading-6 text-white">Collections</h3>
                   <ul role="list" className="mt-6 space-y-4">
+                    
                     <li>
-                      <a href="/find-doctors" className="text-md leading-6 text-gray-300 hover:text-gray-50">
-                       NFT
-                      </a>
+                      <Link href="/" className="text-md leading-6 text-gray-300 hover:text-gray-50">
+                        Contact
+                      </Link>
                     </li>
-                    <li>
-                      <a href="/appointments" className="text-md leading-6 text-gray-300 hover:text-gray-50">
-                        NFT
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/lab-services" className="text-md leading-6 text-gray-300 hover:text-gray-50">
-                        NFT
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/medicines" className="text-md leading-6 text-gray-300 hover:text-gray-50">
-                        NFT
-                      </a>
-                    </li>
+                   
                   </ul>
                 </div>
                 <div className="mt-10 md:mt-0">
@@ -128,16 +118,17 @@ const Footer = () => {
               </div>
             </div>
 
-          </div>
+          </article>
           <div className="mt-16 border-t border-gray-400/30 pt-8 sm:mt-20 lg:mt-24">
             <div className="text-md text-center text-white">
-              Copyright © 2024. KENZO
+              Copyright © 2024. 中國朝代藝術
+              Chinese Dynasty Art
 
 
             </div>
           </div>
-        </div>
-      </div>
+        </main>
+      </aside>
     </footer>
 
   )
