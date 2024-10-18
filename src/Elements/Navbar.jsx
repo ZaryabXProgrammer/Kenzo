@@ -109,32 +109,35 @@ const Navbar = () => {
             <li>
               <Link
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                to='/' className="block py-1 px-2 transition-colors hover:bg-white hover:text-black text-white text-sm  " aria-current="page">
-                Home
+                to='/' className="flex flex-col lg:items-center items-start py-1 px-2 transition-colors hover:bg-white hover:text-black text-white text-sm  " aria-current="page">
+                <span>主页</span>
+                <span>Home</span>
               </Link>
             </li>
-            <li>
-              <Link to='/products' className="flex flex-col lg:items-center items-start py-1 px-2 transition-colors hover:bg-white hover:text-black text-white text-sm  " aria-current="page">
-                <span>数字化创新</span>
-                <span>Digital Innovation</span>
-              </Link>
-            </li>
+
+           
+
             <li>
               <a
                 onClick={() => handleScrollToSection('nftMarketplace')}
-
-                className="block cursor-pointer py-1 px-2 cursor-pointer` transition-colors hover:bg-white hover:text-black text-white text-sm"
-              >
-                NFT Marketplace
+                className="flex flex-col cursor-pointer lg:items-center items-start py-1 px-2 transition-colors hover:bg-white hover:text-black text-white text-sm ">
+                <span>正在交易的NFT</span>
+                <span>NFT Marketplace</span>
               </a>
             </li>
-            <li>
-              <a
-                onClick={() => handleScrollToSection('ourCollections')}
 
-                className="block py-1 px-2 cursor-pointer transition-colors hover:bg-white hover:text-black text-white text-sm"
-              >
-                Our Collections
+            <li>
+              <a onClick={() => handleScrollToSection('ourCollections')} className="flex flex-col lg:items-center items-start py-1 px-2 transition-colors cursor-pointer hover:bg-white hover:text-black text-white text-sm  " aria-current="page">
+                <span>我们的收藏</span>
+                <span>Our Collections</span>
+              </a>
+            </li>
+
+            <li>
+              <a onClick={() => handleScrollToSection('aboutUs')}
+                className="flex flex-col lg:items-center items-start py-1 px-2 transition-colors cursor-pointer hover:bg-white hover:text-black text-white text-sm  " aria-current="page">
+                <span>关于我们</span>
+                <span>About Us</span>
               </a>
             </li>
 

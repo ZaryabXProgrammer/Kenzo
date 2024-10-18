@@ -4,15 +4,16 @@ import Home from './Pages/Home'
 import Navbar from './Elements/Navbar'
 import Footer from './Elements/Footer'
 import Products from './Pages/Products'
-import { useState } from 'react'
+
+
 
 const App = () => {
-const [isInverted, setIsInverted] = useState(false);
+
 
  
 
   return (
-    <div className={isInverted ? 'inverted-colors' : ''}>
+    <div >
       <Router>
         <Navbar />
 

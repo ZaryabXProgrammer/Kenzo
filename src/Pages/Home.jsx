@@ -3,8 +3,10 @@ import { useLocation } from 'react-router-dom'
 import CardSlider from '../Components/LandingPage/CardSlider'
 import Hero from '../Components/LandingPage/Hero'
 
+
 import ScrambledImages from '../Components/LandingPage/ScrambledImages'
 import { useEffect } from 'react'
+import BottomPage from '../Components/LandingPage/BottomPage'
 
 
 
@@ -22,7 +24,7 @@ const Home = () => {
 
 
   return (
-    <div className='overflow-x-hidden'>
+    <div className='overflow-x-hidden '>
 
       <Hero />
 
@@ -31,6 +33,8 @@ const Home = () => {
       {/* <QuadGallery /> */}
 
       <ScrambledImages />
+
+      <BottomPage />
 
       {/* <ImgCarousel /> */}
 
