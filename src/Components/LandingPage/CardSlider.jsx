@@ -74,7 +74,7 @@ const CardSlider = () => {
             </article>
 
             <div className="text-center p-10">
-                <h1 className="font-bold text-4xl mb-4 pb-[4%]">NFT <span className='text-red-500'>MARKETPLACE</span></h1>
+                <h1 className="font-bold text-4xl mb-4 pb-[4%] flex flex-col items-center gap-2">正在交易的NFT<span className='text-red-500'>NFT Marketplace</span></h1>
 
                 <div className="relative">
                     <div ref={sliderRef} className="keen-slider">

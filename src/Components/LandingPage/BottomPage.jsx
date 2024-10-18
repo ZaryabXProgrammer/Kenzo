@@ -44,7 +44,7 @@ const BottomPage = () => {
      
                     <article className="rightSide flex-1  text-white py-10 px-5 ">
                         <div className="container flex flex-col gap-5">
-                            <h2 className="text-4xl font-bold">創新 Innovation</h2>
+                            <h2 className="text-4xl font-bold text-red-600">創新 Innovation</h2>
                             <p className="text-2xl leading-relaxed text-gray-300">
                                 我們正在徹底改變藝術品擁有權的方式
                                 We are revolutionizing historical art ownership, minting relic NFTs to the Blockchain. These masterpieces are fractionalized and available across decentralized platforms to anyone with an Ethereum wallet.
